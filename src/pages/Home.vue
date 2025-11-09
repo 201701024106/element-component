@@ -2,13 +2,11 @@
     <div>
         <el-button>111</el-button>
     </div>
-  
+
 </template>
 
 <script setup lang="ts">
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
