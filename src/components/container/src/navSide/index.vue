@@ -12,6 +12,10 @@
             <el-icon-trend-charts></el-icon-trend-charts>
             <span>趋势标记</span>
         </el-menu-item>
+        <el-menu-item index="/notification" @click="handleClick('/notification')">
+            <el-icon-trend-charts></el-icon-trend-charts>
+            <span>通知菜单</span>
+        </el-menu-item>
     </el-menu>
 </template>
 

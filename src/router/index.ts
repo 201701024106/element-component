@@ -41,6 +41,19 @@ const routes: RouteRecordRaw[] = [
       },
     ]
   },
+  {
+    path: '/notification', component: container,
+    children: [
+      {
+        path: '',
+        component: () => import('@/pages/Notification.vue'),
+        meta: {
+          title: '通知菜单',
+          icon: 'el-icon-rice-ag'
+        }
+      },
+    ]
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),
