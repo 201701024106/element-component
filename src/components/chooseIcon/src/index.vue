@@ -22,7 +22,7 @@
 import { ref, watch, defineProps, defineEmits, computed } from 'vue';
 import * as elICons from '@element-plus/icons-vue';
 import { toLine } from '@/utils';
-import { useCopy } from '@/hooks/useCopy';
+import { useCopy } from '@/components/hooks/useCopy';
 const emits = defineEmits(['update:visible']);
 const props = defineProps({
     title: {

@@ -9,7 +9,6 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue';
-import tiChooseIcon from '@/components/chooseIcon/src/index.vue';
 const title = ref('图标选择');
 const visible = ref(false);
 </script>
