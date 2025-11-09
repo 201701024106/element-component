@@ -6,7 +6,7 @@ const routes: RouteRecordRaw[] = [
     path: '/', component: container,
     children: [
       {
-        path: '/',
+        path: '',
         component: () => import('@/pages/Home.vue'),
         meta: {
           title: '首页',
@@ -19,8 +19,21 @@ const routes: RouteRecordRaw[] = [
     path: '/icon-select', component: container,
     children: [
       {
-        path: '/',
-        component: () => import('@/pages/Home.vue'),
+        path: '',
+        component: () => import('@/pages/IconSelect.vue'),
+        meta: {
+          title: '图标选择器',
+          icon: 'el-icon-rice-ag'
+        }
+      },
+    ]
+  },
+  {
+    path: '/trend', component: container,
+    children: [
+      {
+        path: '',
+        component: () => import('@/pages/Trend.vue'),
         meta: {
           title: '图标选择器',
           icon: 'el-icon-rice-ag'

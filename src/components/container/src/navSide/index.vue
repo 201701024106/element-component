@@ -1,15 +1,15 @@
 <template>
-    <el-menu default-active="2" :collapse="props.isCollapse" @open="handleOpen" class="el-menu-vertical-demo">
-        <el-menu-item index="1">
-            <el-icon-rice-ag></el-icon-rice-ag>
+    <el-menu :default-active="$route.path" :collapse="props.isCollapse" class="el-menu-vertical-demo">
+        <el-menu-item index="" @click="handleClick('/')">
+            <el-icon-house></el-icon-house>
             <span>首页</span>
         </el-menu-item>
-        <el-menu-item index="2">
-            <el-icon-ottom></el-icon-ottom>
+        <el-menu-item index="/icon-select" @click="handleClick('/icon-select')">
+            <el-icon-select></el-icon-select>
             <span>图标选择器</span>
         </el-menu-item>
-        <el-menu-item index="3">
-            <el-icon-ox></el-icon-ox>
+        <el-menu-item index="/trend" @click="handleClick('/trend')">
+            <el-icon-trend-charts></el-icon-trend-charts>
             <span>趋势标记</span>
         </el-menu-item>
     </el-menu>
@@ -17,15 +17,16 @@
 
 <script setup lang="ts">
 import { ref, reactive, defineProps } from 'vue';
-// const isCollapse = ref(false);
+import { useRouter } from 'vue-router';
+const router = useRouter();
 const props = defineProps({
     isCollapse: {
         type: Boolean,
         default: false
     }
 });
-const handleOpen = (key: string, keyPath: string[]) => {
-    console.log(key, keyPath)
+const handleClick = (path: string) => {
+    router.push(path);
 }
 </script>
 

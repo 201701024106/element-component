@@ -15,8 +15,7 @@ const iconArr = []
 // 全局注册图标
 for (let i in ElementPlusIconsVue) {
   iconArr.push(`el-icon${toLine(i)}`)
-  app.component(`el-icon${toLine(i)}`, ElementPlusIconsVue[i])
-  
+  app.component(`el-icon-${toLine(i)}`, ElementPlusIconsVue[i])
 }
 app.config.globalProperties.iconArr = iconArr;
 app.use(router).use(ElementPlus)
