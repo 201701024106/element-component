@@ -1,7 +1,9 @@
 import { App } from 'vue';
 import chooseIcon from './chooseIcon';
 import trend from './trend';
-const components = [chooseIcon, trend];
+import notification from './notification';
+import list from './list';
+const components = [chooseIcon, trend, notification, list];
 export default {
     install(app: App) {
         components.forEach(component => {
