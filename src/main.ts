@@ -5,7 +5,8 @@ import 'element-plus/dist/index.css';
 import mockUI from '@/components/index';
 // 安装图标包
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-import './style.css'
+import './assets/main.css';
+import './style.scss'
 import App from './App.vue'
 
 const app = createApp(App)
