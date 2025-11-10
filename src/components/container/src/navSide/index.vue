@@ -1,6 +1,6 @@
 <template>
     <el-menu :default-active="$route.path" :collapse="props.isCollapse" class="el-menu-vertical-demo">
-        <el-menu-item index="" @click="handleClick('/')">
+        <el-menu-item index="/" @click="handleClick('/')">
             <el-icon-house></el-icon-house>
             <span>首页</span>
         </el-menu-item>
@@ -15,6 +15,10 @@
         <el-menu-item index="/notification" @click="handleClick('/notification')">
             <el-icon-trend-charts></el-icon-trend-charts>
             <span>通知菜单</span>
+        </el-menu-item>
+        <el-menu-item index="/leftmenu" @click="handleClick('/leftmenu')">
+            <el-icon-trend-charts></el-icon-trend-charts>
+            <span>左侧菜单</span>
         </el-menu-item>
     </el-menu>
 </template>
