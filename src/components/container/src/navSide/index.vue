@@ -1,5 +1,5 @@
 <template>
-    <el-menu :default-active="$route.path" :collapse="props.isCollapse" class="el-menu-vertical-demo">
+    <!-- <el-menu :default-active="$route.path" :collapse="props.isCollapse" class="el-menu-vertical-demo">
         <el-menu-item index="/" @click="handleClick('/')">
             <el-icon-house></el-icon-house>
             <span>首页</span>
@@ -20,13 +20,42 @@
             <el-icon-trend-charts></el-icon-trend-charts>
             <span>左侧菜单</span>
         </el-menu-item>
-    </el-menu>
+    </el-menu> -->
+    <ti-leftmenu :data="data" router :collapse="props.isCollapse" :default-active="$route.path"></ti-leftmenu>
 </template>
 
 <script setup lang="ts">
+import tiLeftmenu from '@/components/leftMenu/src/index.vue'
 import { ref, reactive, defineProps } from 'vue';
 import { useRouter } from 'vue-router';
 const router = useRouter();
+const data = reactive([
+    {
+        name: '首页',
+        icon: 'house',
+        index: '/'
+    },
+    {
+        name: '图标选择器',
+        icon: 'select',
+        index: '/icon-select'
+    },
+    {
+        name: '趋势标记',
+        icon: 'trend-charts',
+        index: '/trend'
+    },
+    {
+        name: '通知菜单',
+        icon: 'trend-charts',
+        index: '/notification'
+    },
+    {
+        name: '左侧菜单',
+        icon: 'trend-charts',
+        index: '/leftmenu'
+    }
+])
 const props = defineProps({
     isCollapse: {
         type: Boolean,

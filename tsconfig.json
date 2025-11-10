@@ -1,6 +1,9 @@
 {
   "files": [],
   "compilerOptions": {
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "jsxImportSource": "vue", // 添加这一行来指定 jsx 运行时
     "baseUrl": ".",
     "paths": {
       "@/*": [

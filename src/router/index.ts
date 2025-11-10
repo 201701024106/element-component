@@ -54,6 +54,19 @@ const routes: RouteRecordRaw[] = [
       },
     ]
   },
+  {
+    path: '/leftmenu', component: container,
+    children: [
+      {
+        path: '',
+        component: () => import('@/pages/Leftmenu.vue'),
+        meta: {
+          title: '左侧菜单',
+          icon: 'el-icon-rice-ag'
+        }
+      },
+    ]
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),
