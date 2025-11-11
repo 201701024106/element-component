@@ -93,6 +93,19 @@ const routes: RouteRecordRaw[] = [
       },
     ]
   },
+  {
+    path: '/dateRange', component: container,
+    children: [
+      {
+        path: '',
+        component: () => import('@/pages/DateRange.vue'),
+        meta: {
+          title: '日期选择器',
+          icon: 'el-icon-rice-ag'
+        }
+      },
+    ]
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),

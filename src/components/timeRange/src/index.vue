@@ -1,5 +1,5 @@
 <template>
-    <div class="demo-time-range flex flex-wrap gap-4">
+    <div class="ti-time-range-container flex flex-wrap gap-4">
         <el-time-select v-bind="$attrs.startOptions" v-model="startModelValue" class="w-[240px] mr-[4px]"
             :max-time="endModelValue || endTime" :start="startTime" :step="step" :end="endTime" />
         <el-time-select v-bind="$attrs.endOptions" v-model="endModelValue" class="w-[240px]"

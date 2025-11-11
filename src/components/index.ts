@@ -6,7 +6,8 @@ import list from './list';
 import leftMenu from './leftMenu';
 import progress from './progress';
 import timeRange from './timeRange';
-const components = [chooseIcon, trend, notification, list, leftMenu, progress, timeRange];
+import dateRange from './dateRange';
+const components = [chooseIcon, trend, notification, list, leftMenu, progress, timeRange, dateRange];
 export default {
     install(app: App) {
         components.forEach(component => {
