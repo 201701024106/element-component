@@ -6,11 +6,6 @@
 </template>
 
 <style lang="scss">
-svg {
-  width: 1em;
-  height: 1em;
-}
-
 html,
 body,
 #app,

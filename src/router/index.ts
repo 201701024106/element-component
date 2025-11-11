@@ -67,6 +67,20 @@ const routes: RouteRecordRaw[] = [
       },
     ]
   },
+  ,
+  {
+    path: '/progress', component: container,
+    children: [
+      {
+        path: '',
+        component: () => import('@/pages/Progress.vue'),
+        meta: {
+          title: '进度条',
+          icon: 'el-icon-rice-ag'
+        }
+      },
+    ]
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),

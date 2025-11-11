@@ -54,6 +54,11 @@ const data = reactive([
         name: '左侧菜单',
         icon: 'trend-charts',
         index: '/leftmenu'
+    },
+    {
+        name: '进度条',
+        icon: 'trend-charts',
+        index: '/progress'
     }
 ])
 const props = defineProps({

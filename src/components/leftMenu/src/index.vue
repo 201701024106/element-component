@@ -73,4 +73,9 @@ const props = defineProps({
     width: 200px;
     min-height: 400px;
 }
+
+svg {
+    width: 1em;
+    height: 1em;
+}
 </style>
