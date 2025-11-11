@@ -59,6 +59,11 @@ const data = reactive([
         name: '进度条',
         icon: 'trend-charts',
         index: '/progress'
+    },
+    {
+        name: '时间选择器',
+        icon: 'trend-charts',
+        index: '/timeRange'
     }
 ])
 const props = defineProps({

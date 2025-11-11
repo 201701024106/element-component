@@ -67,7 +67,6 @@ const routes: RouteRecordRaw[] = [
       },
     ]
   },
-  ,
   {
     path: '/progress', component: container,
     children: [
@@ -76,6 +75,19 @@ const routes: RouteRecordRaw[] = [
         component: () => import('@/pages/Progress.vue'),
         meta: {
           title: '进度条',
+          icon: 'el-icon-rice-ag'
+        }
+      },
+    ]
+  },
+  {
+    path: '/timeRange', component: container,
+    children: [
+      {
+        path: '',
+        component: () => import('@/pages/TimeRange.vue'),
+        meta: {
+          title: '时间选择器',
           icon: 'el-icon-rice-ag'
         }
       },
