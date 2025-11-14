@@ -106,6 +106,19 @@ const routes: RouteRecordRaw[] = [
       },
     ]
   },
+  {
+    path: '/citySelect', component: container,
+    children: [
+      {
+        path: '',
+        component: () => import('@/pages/citySelect.vue'),
+        meta: {
+          title: '城市选择器',
+          icon: 'el-icon-rice-ag'
+        }
+      },
+    ]
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),
