@@ -5,10 +5,10 @@
         <h5>2、key</h5>
         <ti-leftmenu :data="data2" labelKey="a" indexKey="b" iconKey="c" background-color="#f0f0f0"
             defaultActive="2"></ti-leftmenu>
-        <h5>2、无线层级菜单</h5>
+        <h5>2、无限层级菜单</h5>
         <ti-infinite-leftmenu :data="data3" background-color="#f5f5f5" defaultActive="1-1-1-1"
             active-text-color="pink"></ti-infinite-leftmenu>
-        <h5>2、无线层级菜单 + key</h5>
+        <h5>2、无限层级菜单 + key</h5>
         <ti-infinite-leftmenu :data="data4" labelKey="a" indexKey="b" iconKey="c" background-color="#f5f5f5"
             defaultActive="1-1-1-1" active-text-color="pink"></ti-infinite-leftmenu>
     </div>
