@@ -8,7 +8,8 @@ import progress from './progress';
 import timeRange from './timeRange';
 import dateRange from './dateRange';
 import citySelect from './citySelect';
-const components = [chooseIcon, trend, notification, list, leftMenu, progress, timeRange, dateRange, citySelect];
+import calendar from './calendar';
+const components = [chooseIcon, trend, notification, list, leftMenu, progress, timeRange, dateRange, citySelect, calendar];
 export default {
     install(app: App) {
         components.forEach(component => {

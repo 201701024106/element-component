@@ -74,6 +74,11 @@ const data = reactive([
         name: '城市选择器',
         icon: 'trend-charts',
         index: '/citySelect'
+    },
+    {
+        name: '日历选择器',
+        icon: 'trend-charts',
+        index: '/calendar'
     }
 ])
 const props = defineProps({

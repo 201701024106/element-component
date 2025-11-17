@@ -119,6 +119,19 @@ const routes: RouteRecordRaw[] = [
       },
     ]
   },
+  {
+    path: '/calendar', component: container,
+    children: [
+      {
+        path: '',
+        component: () => import('@/pages/Calendar.vue'),
+        meta: {
+          title: '日历选择器',
+          icon: 'el-icon-rice-ag'
+        }
+      },
+    ]
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),
