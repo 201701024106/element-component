@@ -85,6 +85,14 @@ const routes: RouteRecordRaw[] = [
                     icon: 'el-icon-rice-ag'
                 }
             },
+            {
+                path: '/dynamicForm',
+                component: () => import('@/pages/DynamicForm.vue'),
+                meta: {
+                    title: '表单组件',
+                    icon: 'el-icon-rice-ag'
+                }
+            },
         ]
     },
 ];

@@ -79,6 +79,11 @@ const data = reactive([
         name: '日历选择器',
         icon: 'trend-charts',
         index: '/calendar'
+    },
+    {
+        name: '表单组件',
+        icon: 'trend-charts',
+        index: '/dynamicForm'
     }
 ])
 const props = defineProps({
