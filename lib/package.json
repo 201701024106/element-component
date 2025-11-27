@@ -1,0 +1,19 @@
+{
+  "name": "ti-element-component",
+  "version": "0.0.1",
+  "main": "index.umd.js",
+  "module": "index.esm.js",
+  "types": "index.d.ts",
+  "author": {
+    "name": "Dongsheng Wang",
+    "email": "201647997@qq.com"
+  },
+  "keywords": [
+    "ti",
+    "component",
+    "vue",
+    "element-plus",
+    "element-component",
+    "封装组件"
+  ]
+}

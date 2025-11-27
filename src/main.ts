@@ -4,8 +4,10 @@ import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 // import tiVueUI from '@/components/index';
 // import tiVueUI from '../lib/index.es';
-import tiTable from '../lib/table/index';
-import "../lib/ti-vue-ui.css";
+// import tiTable from '../lib/table/index';
+// import "../lib/ti-vue-ui.css";
+import tiElementComponent from "ti-element-component";
+import "ti-element-component/index.css";
 // 安装图标包
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import './assets/main.css';
@@ -14,7 +16,8 @@ import App from './App.vue'
 
 const app = createApp(App)
 // app.use(tiVueUI)
-app.use(tiTable)
+// app.use(tiTable)
+app.use(tiElementComponent)
 import { toLine } from './utils';
 app.config.globalProperties.toLine = toLine;
 const iconArr = []

@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url';
 import fsExtra from 'fs-extra';
 import fs from "node:fs"
 
+const version = '0.0.1-rc.0';
 // 获取当前文件的绝对路径
 const __filename = fileURLToPath(import.meta.url);
 // 获取当前文件所在目录
@@ -44,23 +45,11 @@ const buildAll = async () => {
             emptyOutDir: true,
             rollupOptions: {
                 ...rollOptions,
-                output: {
-                    ...rollOptions.output,
-                    entryFileNames: (chunkInfo) => {
-                        // 自定义文件名规则
-                        if (chunkInfo.name.endsWith('.umd')) {
-                            return '[name].umd.js';
-                        }
-                        return '[name].[format].js';
-                    },
-                    // 确保ES模块格式正确
-                    format: 'umd'
-                }
             },
             lib: {
                 entry: path.resolve(entryDir, 'index.ts'),
-                name: 'ti-vue-ui',
-                fileName: 'ti-vue-ui',
+                name: 'ti-element-component',
+                fileName: 'index',
                 formats: ['es', 'umd']
             }
         }
@@ -93,9 +82,9 @@ const toLine = (value) => {
 const generatePackageJson = async (name) => {
     const fileStr = `{
         "name": "ti-element-${toLine(name)}",
-        "version": "0.0.0",
+        "version": "${version}",
         "main": "index.umd.js",
-        "module": "index.es.js",
+        "module": "index.js",
         "types": "index.d.ts",
         "author": {
             "name": "Dongsheng Wang",
