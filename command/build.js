@@ -92,13 +92,38 @@ const toLine = (value) => {
 // 每个组件生成 package.json
 const generatePackageJson = async (name) => {
     const fileStr = `{
-        "name": "ti-${toLine(name)}",
+        "name": "ti-element-${toLine(name)}",
+        "version": "0.0.0",
         "main": "index.umd.js",
         "module": "index.es.js",
-        "style": "style.css"
+        "types": "index.d.ts",
+        "author": {
+            "name": "Dongsheng Wang",
+            "email": "201647997@qq.com"
+        },
+        "keywords": [
+            "ti",
+            "component",
+            "element-${toLine(name)}",
+            "ti-element-${toLine(name)}",
+            "vue",
+                "element-plus",
+                "element-component",
+                "封装组件"
+        ]
     }`
     // 输出
     fsExtra.outputFile(path.resolve(outputDir, `${name}/package.json`), fileStr, 'utf-8')
+}
+const generateDts = async (name) => {
+    const fileStr = `import { App } from 'vue'
+        // 声明代表Vue的组件库
+        declare const _default: {
+            install(app: App): void
+        }
+        export default _default;`
+    // 输出
+    fsExtra.outputFile(path.resolve(outputDir, `${name}/index.d.ts`), fileStr, 'utf-8')
 }
 
 const buildLib = async () => {
@@ -114,6 +139,7 @@ const buildLib = async () => {
     for (const name of components) {
         await buildSingle(name)
         await generatePackageJson(name)
+        await generateDts(name)
     }
 }
 buildLib()

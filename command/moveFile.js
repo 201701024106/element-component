@@ -3,7 +3,7 @@ import path from 'path';
 
 const srcDir = path.resolve('./src');
 const destDir = path.resolve('./packages'); // 目标目录
-const ignoreDirs = ['mock'];
+const ignoreDirs = ['mock', 'router'];
 const ignoreFiles = ['index.vue', 'menu.tsx', 'types.ts', 'type.ts', 'useCopy.ts', 'index.scss'];
 
 const packagesIndexDir = "./src/components/index.ts";
@@ -13,6 +13,32 @@ if (!fs.existsSync(destDir)) {
     fs.mkdirSync(destDir, { recursive: true });
 }
 
+/**
+ * 清空文件夹
+ * @param {*} folderPath 
+ */
+function deleteFolderRecursive(folderPath) {
+    //判断文件夹是否存在
+    if (fs.existsSync(folderPath)) {
+        //读取文件夹下的文件目录，以数组形式输出
+        fs.readdirSync(folderPath).forEach((file) => {
+            //拼接路径
+            const curPath = path.join(folderPath, file);
+            //判断是不是文件夹，如果是，继续递归
+            if (fs.lstatSync(curPath).isDirectory()) {
+                deleteFolderRecursive(curPath);
+            } else {
+                //删除文件或文件夹
+                fs.unlinkSync(curPath);
+            }
+        });
+        //仅可用于删除空目录
+        fs.rmdirSync(folderPath);
+    }
+}
+
+// 删除文件夹下的所有文件和文件夹
+deleteFolderRecursive('../packages');
 // 读取所有文件（包括子目录中的文件）
 const files = fs.readdirSync(srcDir, { recursive: true });
 

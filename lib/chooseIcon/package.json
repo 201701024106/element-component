@@ -1,6 +1,21 @@
 {
-        "name": "ti-choose-icon",
+        "name": "ti-element-choose-icon",
+        "version": "0.0.0",
         "main": "index.umd.js",
         "module": "index.es.js",
-        "style": "style.css"
+        "types": "index.d.ts",
+        "author": {
+            "name": "Dongsheng Wang",
+            "email": "201647997@qq.com"
+        },
+        "keywords": [
+            "ti",
+            "component",
+            "element-choose-icon",
+            "ti-element-choose-icon",
+            "vue",
+                "element-plus",
+                "element-component",
+                "封装组件"
+        ]
     }
