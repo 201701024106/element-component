@@ -1,7 +1,9 @@
 <template>
     <el-header class="header" @click="() => emit('collapseChange', !props.isCollapse)">
-        <el-icon-arrow-right v-if="props.isCollapse"></el-icon-arrow-right>
-        <el-icon-arrow-left v-else></el-icon-arrow-left>
+        <div class="w-[100px]">
+            <el-icon-arrow-right v-if="props.isCollapse"></el-icon-arrow-right>
+            <el-icon-arrow-left v-else></el-icon-arrow-left>
+        </div>
     </el-header>
 </template>
 

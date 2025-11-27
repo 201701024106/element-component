@@ -10,7 +10,9 @@ import dateRange from './dateRange';
 import citySelect from './citySelect';
 import calendar from './calendar';
 import form from './form';
-const components = [chooseIcon, trend, notification, list, leftMenu, progress, timeRange, dateRange, citySelect, calendar, form];
+import table from './table';
+import modalForm from './modalForm';
+const components = [chooseIcon, trend, notification, list, leftMenu, progress, timeRange, dateRange, citySelect, calendar, form, modalForm, table];
 export default {
     install(app: App) {
         components.forEach(component => {

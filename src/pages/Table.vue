@@ -44,7 +44,6 @@
 </template>
 
 <script setup lang="ts">
-import { fa } from 'element-plus/es/locale';
 import { ref, reactive, createVNode, onMounted } from 'vue';
 
 const tableData = ref([])

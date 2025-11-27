@@ -84,6 +84,11 @@ const data = reactive([
         name: '表单组件',
         icon: 'trend-charts',
         index: '/dynamicForm'
+    },
+    {
+        name: '表格组件',
+        icon: 'trend-charts',
+        index: '/table'
     }
 ])
 const props = defineProps({
