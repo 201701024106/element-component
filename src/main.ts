@@ -3,8 +3,8 @@ import router from '@/router/index';
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 // import tiVueUI from '@/components/index';
-import tiVueUI from '../lib/index.es';
-// import tiTable from '../lib/table/index';
+// import tiVueUI from '../lib/index.es';
+import tiTable from '../lib/table/index';
 import "../lib/ti-vue-ui.css";
 // 安装图标包
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
@@ -13,8 +13,8 @@ import './style.scss'
 import App from './App.vue'
 
 const app = createApp(App)
-app.use(tiVueUI)
-// app.use(tiTable)
+// app.use(tiVueUI)
+app.use(tiTable)
 import { toLine } from './utils';
 app.config.globalProperties.toLine = toLine;
 const iconArr = []

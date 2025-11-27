@@ -100,7 +100,7 @@ const routes: RouteRecordRaw[] = [
                     title: '表格组件',
                     icon: 'el-icon-rice-ag'
                 }
-            }
+            },
         ]
     },
 ];
