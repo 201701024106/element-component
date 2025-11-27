@@ -14,6 +14,7 @@
 </template>
 
 <script setup lang="ts">
+import { tr } from 'element-plus/es/locale';
 import { ref, reactive, defineExpose, defineProps, defineEmits, computed } from 'vue';
 
 const dynamicForm = ref(null);
