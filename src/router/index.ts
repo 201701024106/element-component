@@ -93,6 +93,14 @@ const routes: RouteRecordRaw[] = [
                     icon: 'el-icon-rice-ag'
                 }
             },
+            {
+                path: '/table',
+                component: () => import('@/pages/Table.vue'),
+                meta: {
+                    title: '表格组件',
+                    icon: 'el-icon-rice-ag'
+                }
+            },
         ]
     },
 ];

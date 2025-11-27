@@ -2,10 +2,20 @@ import { defineConfig } from 'vite'
 import path from 'path'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { viteMockServe } from "vite-plugin-mock";
+import { resolve } from "node:path";
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [vue(), vueJsx()],
+    plugins: [vue(), vueJsx(), viteMockServe({
+        mockPath: "./src/mock",
+        enable: true,
+        prodEnabled: true,
+        ignore: /^\_/,
+        logger: true,
+        injectCode: "import { setUpProdMockServer } from './mockProdServer'; setUpProdMockServer();",
+        injectFile: resolve("./src/main.ts"),
+    }),],
     server: {
         port: 8888
     },

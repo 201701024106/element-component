@@ -584,13 +584,11 @@ const modalFormOptions = reactive([
 const submitModalForm = (form) => {
     form.validate().then(() => {
         const model = form.getFormData();
-        console.log(model);
         ElMessage.success('验证成功');
         visible.value = false;
+        form.resetFields();
     }).catch(() => {
         ElMessage.error('验证失败');
-    }).family(() => {
-        form.resetFields();
     });
 }
 const resetModalForm = (form) => {
