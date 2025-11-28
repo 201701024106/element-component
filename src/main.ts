@@ -12,14 +12,12 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import './assets/main.css';
 import './style.scss'
 import App from './App.vue'
-import { setUpProdMockServer } from "./mockProdServer.ts"
 
 const app = createApp(App)
 // app.use(tiVueUI)
 // app.use(tiTable)
 app.use(tiElementComponent)
 import { toLine } from './utils';
-setUpProdMockServer()
 app.config.globalProperties.toLine = toLine;
 const iconArr = []
 // 全局注册图标
