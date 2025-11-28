@@ -1,1 +1,0 @@
-import{_ as o,r as n,c as r,o as s,a,w as c,b as l}from"./index-DAdzyAQz.js";const _={};function u(d,e){const t=n("el-button");return s(),r("div",null,[a(t,null,{default:c(()=>[...e[0]||(e[0]=[l("111",-1)])]),_:1})])}const m=o(_,[["render",u]]);export{m as default};
