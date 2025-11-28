@@ -10,8 +10,7 @@
     "build:comoponents": "node ./command/build.js",
     "move": "node ./command/moveFile.js",
     "prelib": "node ./command/moveFile.js",
-    "lib": "npm run build:comoponents",
-    "deploy": "gh-pages -d dist"
+    "lib": "npm run build:comoponents"
   },
   "dependencies": {
     "@element-plus/icons": "^0.0.11",
