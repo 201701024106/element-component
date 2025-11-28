@@ -1,1 +1,0 @@
-import{d as a,e as c,r,c as m,o as _,a as d}from"./index-85_wcgJB.js";const i={class:""},f=a({__name:"CitySelect",setup(p){const e=c({}),n=o=>{console.log(o)};return(o,t)=>{const l=r("ti-city-select");return _(),m("div",i,[d(l,{modelValue:e.value,"onUpdate:modelValue":[t[0]||(t[0]=s=>e.value=s),n]},null,8,["modelValue"])])}}});export{f as default};
