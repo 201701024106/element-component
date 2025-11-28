@@ -6,9 +6,7 @@
         <p>3、可扩展性强</p>
         <ti-table border :loading="tableLoading" :loadingConfig="loadingConfig" :data="tableData"
             :options="tableOptions" rowEditable :rowEditIndex="rowEditIndex" @confirm="onRowConfirm"
-            :pageConfig="pageConfig"
-            v-model:currentPage="currentPage"
-            @page-change="handleChange"
+            :pageConfig="pageConfig" v-model:currentPage="currentPage" @page-change="handleChange"
             @cancel="onRowCancel">
             <template #editCell="{ row }">
                 <div class="w-[60px] flex items-center justify-button">
@@ -39,12 +37,13 @@
             </template>
 
         </ti-table>
-        
+
     </div>
 </template>
 
 <script setup lang="ts">
 import { ref, reactive, createVNode, onMounted } from 'vue';
+import { getTableList } from "@/http/table"
 
 const tableData = ref([])
 const tableOptions = ref([
@@ -141,20 +140,12 @@ onMounted(() => {
 })
 const fetchData = () => {
     tableLoading.value = true;
-    fetch('/api/table/list', {
-        method: 'post',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            page: currentPage.value,
-            pageSize: pageConfig.pageSize
-        }),
-    }).then(res => res.json()).then(res => {
+    getTableList({
+        page: currentPage.value,
+        pageSize: pageConfig.pageSize
+    }).then(res => {
         tableLoading.value = false;
-        if (res.code === 200) {
-            tableData.value = res.data;
-        }
+        tableData.value = res.list;
     })
 }
 const handleChange = (val) => {

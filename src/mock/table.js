@@ -46,8 +46,11 @@ export default [
 
             return {
                 code: 200,
-                data: paginatedData,
-                total: tableData.length  // 返回总数量，方便前端分页
+                data: {
+                    code: 200,
+                    list: paginatedData,
+                    total: tableData.length
+                }
             };
         }
     }
