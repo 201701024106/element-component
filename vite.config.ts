@@ -16,6 +16,8 @@ export default defineConfig({
         injectCode: "import { setUpProdMockServer } from './mockProdServer'; setUpProdMockServer();",
         injectFile: resolve("./src/main.ts"),
     }),],
+    // 关键：base 配置为仓库名（末尾必须加 /）
+    base: '/element-component/',
     server: {
         port: 8888
     },
