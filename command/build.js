@@ -6,8 +6,9 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import { fileURLToPath } from 'url';
 import fsExtra from 'fs-extra';
 import fs from "node:fs"
-
-const version = '0.0.1-rc.0';
+import pkg from '../package.json' with { type: 'json' };
+console.log("组件库版本", pkg.version);
+const version = pkg.version;
 // 获取当前文件的绝对路径
 const __filename = fileURLToPath(import.meta.url);
 // 获取当前文件所在目录
@@ -80,39 +81,41 @@ const toLine = (value) => {
 }
 // 每个组件生成 package.json
 const generatePackageJson = async (name) => {
+    const packageName = name === '.' ? './' : `${name}/`;
     const fileStr = `{
-        "name": "ti-element-${toLine(name)}",
-        "version": "${version}",
-        "main": "index.umd.js",
-        "module": "index.js",
-        "types": "index.d.ts",
-        "author": {
-            "name": "Dongsheng Wang",
-            "email": "201647997@qq.com"
-        },
-        "keywords": [
-            "ti",
-            "component",
-            "element-${toLine(name)}",
-            "ti-element-${toLine(name)}",
-            "vue",
-                "element-plus",
-                "element-component",
-                "封装组件"
-        ]
-    }`
+    "name": "ti-element-${name === '.' ? 'component' : toLine(name)}",
+    "version": "${version}",
+    "main": "index.umd.js",
+    "module": "index.js",
+    "types": "index.d.ts",
+    "author": {
+        "name": "Dongsheng Wang",
+        "email": "201647997@qq.com"
+    },
+    "keywords": [
+        "ti",
+        "component",
+        "element-${name === '.' ? 'component' : toLine(name)}",
+        "ti-element-${name === '.' ? 'component' : toLine(name)}",
+        "vue",
+            "element-plus",
+            "element-component",
+            "封装组件"
+    ]
+}`;
     // 输出
-    fsExtra.outputFile(path.resolve(outputDir, `${name}/package.json`), fileStr, 'utf-8')
+    fsExtra.outputFile(path.resolve(outputDir, `${packageName}package.json`), fileStr, 'utf-8')
 }
 const generateDts = async (name) => {
+    const packageName = name === '.' ? '' : `${name}/`;
     const fileStr = `import { App } from 'vue'
-        // 声明代表Vue的组件库
-        declare const _default: {
-            install(app: App): void
-        }
-        export default _default;`
+// 声明代表Vue的组件库
+declare const _default: {
+    install(app: App): void
+}
+export default _default;`
     // 输出
-    fsExtra.outputFile(path.resolve(outputDir, `${name}/index.d.ts`), fileStr, 'utf-8')
+    fsExtra.outputFile(path.resolve(outputDir, `${packageName}index.d.ts`), fileStr, 'utf-8')
 }
 
 const buildLib = async () => {
@@ -130,5 +133,8 @@ const buildLib = async () => {
         await generatePackageJson(name)
         await generateDts(name)
     }
+    // 生成根目录下的 package.json
+    await generatePackageJson('.')
+    await generateDts('.')
 }
 buildLib()
