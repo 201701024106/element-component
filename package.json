@@ -21,7 +21,7 @@
     "element-plus": "^2.11.7",
     "nanoid": "^5.1.6",
     "ti-element-component": "^0.0.1-patch.2",
-    "vite-plugin-mock": "^3.0.2",
+    "vite-plugin-mock": "^2.9.6",
     "vue": "^3.5.22",
     "vue-router": "^4.0.13"
   },

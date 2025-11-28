@@ -13,8 +13,6 @@ export default defineConfig({
         prodEnabled: true,
         ignore: /^\_/,
         logger: true,
-        injectCode: "import { setUpProdMockServer } from './mockProdServer'; setUpProdMockServer();",
-        injectFile: resolve("./src/main.ts"),
     }),],
     // 关键：base 配置为仓库名（末尾必须加 /）
     base: '/element-component/',
