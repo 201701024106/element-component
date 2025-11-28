@@ -20,3 +20,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist # 指定部署 dist 目录下的文件
+          # 添加这一行以支持 SPA history 模式
+          enable_jekyll: false
