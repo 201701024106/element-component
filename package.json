@@ -1,7 +1,7 @@
 {
-  "name": "ti-vue-ui",
+  "name": "vite-plus",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1-patch.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -20,7 +20,7 @@
     "@fullcalendar/interaction": "^6.1.19",
     "element-plus": "^2.11.7",
     "nanoid": "^5.1.6",
-    "ti-element-component": "^0.0.1-rc.1",
+    "ti-element-component": "^0.0.1-patch.2",
     "vite-plugin-mock": "^3.0.2",
     "vue": "^3.5.22",
     "vue-router": "^4.0.13"

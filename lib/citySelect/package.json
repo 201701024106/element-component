@@ -1,21 +1,21 @@
 {
-        "name": "ti-element-city-select",
-        "version": "0.0.1-rc.0",
-        "main": "index.umd.js",
-        "module": "index.js",
-        "types": "index.d.ts",
-        "author": {
-            "name": "Dongsheng Wang",
-            "email": "201647997@qq.com"
-        },
-        "keywords": [
-            "ti",
-            "component",
-            "element-city-select",
-            "ti-element-city-select",
-            "vue",
-                "element-plus",
-                "element-component",
-                "封装组件"
-        ]
-    }
+    "name": "ti-element-city-select",
+    "version": "0.0.1-patch.2",
+    "main": "index.umd.js",
+    "module": "index.js",
+    "types": "index.d.ts",
+    "author": {
+        "name": "Dongsheng Wang",
+        "email": "201647997@qq.com"
+    },
+    "keywords": [
+        "ti",
+        "component",
+        "element-city-select",
+        "ti-element-city-select",
+        "vue",
+            "element-plus",
+            "element-component",
+            "封装组件"
+    ]
+}

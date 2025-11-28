@@ -15,7 +15,7 @@
                         </component>
                         <span>{{ item[labelKey] }}</span>
                     </template>
-                    <el-menu-item v-for="(item1) in item[childrenKey]" :index="item1.index" :key="item1.name">
+                    <el-menu-item v-for="(item1) in item[childrenKey]" :index="item1[indexKey]" :key="item1[indexKey]">
                         <component v-if="item1[iconKey]" :is='`el-icon-${toLine(item[iconKey])}`' class="mr-[4px]">
                         </component>
                         <span>{{ item1[labelKey] }}</span>

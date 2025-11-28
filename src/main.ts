@@ -2,10 +2,9 @@ import { createApp } from 'vue'
 import router from '@/router/index';
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
-// import tiVueUI from '@/components/index';
-// import tiVueUI from '../lib/index.es';
+// import tiElementComponent from '@/components/index';
+// import "../lib/index.css";
 // import tiTable from '../lib/table/index';
-// import "../lib/ti-vue-ui.css";
 import tiElementComponent from "ti-element-component";
 import "ti-element-component/index.css";
 // 安装图标包
