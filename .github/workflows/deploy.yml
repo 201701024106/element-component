@@ -2,6 +2,8 @@ name: wangdongsheng homepage
 on:
   push:
     branches: [master] # 监听 master 分支推送
+permissions:
+  contents: write # 添加这行，授予内容写入权限
 jobs:
   deploy:
     runs-on: ubuntu-latest
